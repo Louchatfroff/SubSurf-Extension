@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Subway Surfers Hacks",
+  "version": "4.2",
+  "description": "Hacks menu for Subway Surfers on yell0wsuit.page - Speed Hack, Key Mapper, Macro Recorder, Auto Clicker, Visual Filters, NoCoin Mode",
+  "author": "Louchat",
+  "permissions": ["activeTab", "tabs"],
+  "host_permissions": [
+    "https://yell0wsuit.page/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "default_title": "Subway Surfers Hacks"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://yell0wsuit.page/assets/games/subway-surfers-unity/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["unlockall.bin"],
+      "matches": ["https://yell0wsuit.page/*"]
+    }
+  ],
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
